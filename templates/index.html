@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+    <link href="/static/style.css" rel="stylesheet">
+    <title>My Internet Presence</title>
+</head>
+<body>
+    <h2>Vanity Web Scraping Project</h2>
+    <h3>Extracting the only internet presence from Google that matters, YOU</h3>
+    <form action="/" method="POST">
+        <input name="firstname" placeholder="First Name" type="text">
+        <input name="lastname" placeholder="Last Name" type="text">
+        <input type="submit" value="Indulge Yourself">
+    </form>
+    <br>
+    {% for presence in internet_presence %}
+        <p>{{ presence }}</p>
+    {% endfor %}
+</body>
+</html>
