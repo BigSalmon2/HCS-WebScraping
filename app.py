@@ -8,9 +8,8 @@ app = Flask(__name__)
 def index():
     if request.method == 'POST':
         firstname = request.form.get('firstname')
-        dog = firstname.replace(" ", "+")
-        scraped_url = f"https://www.google.com/search?q=%22{dog}%22&start=1&num=100"
-        #scraped_url = 'https://www.google.com/search?q=%22' + dog + '%22&start=1&number=100'
+        firstname1 = firstname.replace(" ", "+")
+        scraped_url = f"https://www.google.com/search?q=%22{firstname1}%22&start=1&num=100"
         print(scraped_url)
         h = {
         "accept-language":"en-US;q=0.8,en;q=0.7",
